@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:mariadb://localhost:3306/sales
+    username: sales
+    password: Laba#Diena
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 5
+      idle-timeout: 300000
+  jackson:
+    visibility:
+      field: any
+logging:
+  level:
+    com.company.sales: info

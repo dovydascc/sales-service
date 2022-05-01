@@ -1,0 +1,15 @@
+version: '3.3'
+
+services:
+  db:
+    container_name: sales_mariadb
+    image: mariadb:10.7.3
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MARIADB_ROOT_PASSWORD: N4iZYMIzD30ngKGYh7CE
+    command: --init-file=/etc/mysql/conf.d/init.sql
+    volumes:
+      - /var/lib/mysql
+      - ./init.sql:/etc/mysql/conf.d/init.sql
